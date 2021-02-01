@@ -14,14 +14,17 @@ class EmailAddressParser
 
   def parse
     e = @emails
-    if e.include?(", ")
-      e = e.split(", ")
-    elsif e.include?(" ")
-      e = e.split(" ")
-    end
+    
+      if e.include?(", ")
+        e = e.split(", ")
+      elsif e.include?(" ")
+        e = e.split(" ")
+      end
     @emails = e
     @emails
   end
 
+  def self.csv?
+    
 
 end
