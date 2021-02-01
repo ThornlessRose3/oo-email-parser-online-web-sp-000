@@ -14,7 +14,7 @@ class EmailAddressParser
 
   def parse
     e = @emails
-    e.split(/( |, )/)
+    e = e.split(/( |, )/)
     #   if e.include?(", ")
     #    e = e.split(", ")
     #  elsif e.include?(" ")
@@ -24,7 +24,5 @@ class EmailAddressParser
     @emails
   end
 
-  def self.csv?
-    
 
 end
