@@ -14,7 +14,7 @@ class EmailAddressParser
 
   def parse
     e = @emails
-    e = e.slice!(/[\w]*[@][\w]*[.][\w]*/)
+    e = e.slice(/ | , /)
     
     #e = e.slice!(/[\w]*[@][\w]*[.][\w]*/)
     
