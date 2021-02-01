@@ -16,12 +16,7 @@ class EmailAddressParser
     e = @emails
     result = []
     e = e.split(/( |, )/)
-    e.each do |i|
-      if i != " " || i != ", "
-        result.push(i)
-      end
-    end
-    result = e
+    e = e.select {|i| (i != " " || i != ", ")}
     
     @emails = e
     @emails
