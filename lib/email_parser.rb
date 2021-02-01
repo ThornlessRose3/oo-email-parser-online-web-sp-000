@@ -5,4 +5,18 @@
 
 class EmailAddressParser
   
+  attr_accesor :emails
+  
+  def initialize(emails = nil)
+    @emails = emails
+  end
+  
+  
+  def parse
+    e = @emails
+    e = e.split(", ")
+    @emails = e
+    @emails
+  end
+  
 end
