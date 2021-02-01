@@ -14,10 +14,25 @@ class EmailAddressParser
 
   def parse
     e = @emails
-    
-    
+    if e.csv?
+      e = e.split(", ")
+    elseif e.whiteSpace?
+      e = e.split(" ")
+    end
     @emails = e
     @emails
   end
   
+  def csv?
+    e = @emails
+    result = e.include?(", ")
+    result
+  end
+
+  def whiteSpace?
+    e = @emails
+    result = e.include?(" ")
+    result
+  end
+
 end
