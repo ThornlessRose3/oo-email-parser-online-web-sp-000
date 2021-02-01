@@ -14,10 +14,15 @@ class EmailAddressParser
 
   def parse
     e = @emails
+    result = []
     e = e.split(/( |, )/)
     e.each do |i|
       if i != " " || i != ", "
-        result 
+        result.push(i)
+      end
+    end
+    result = e
+    
     @emails = e
     @emails
   end
