@@ -15,8 +15,8 @@ class EmailAddressParser
   def parse
     e = @emails
     result = []
-    e = e.split(/( |, )/)
-    e = e.select {|i| (i != " " || i != ", ")}
+    e = e.slice(/( |, )/)
+    
     
     @emails = e
     @emails
