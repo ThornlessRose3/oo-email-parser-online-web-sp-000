@@ -23,13 +23,13 @@ class EmailAddressParser
     @emails
   end
   
-  def csv?
+  def self.csv?
     e = @emails
     result = e.include?(", ")
     result
   end
 
-  def whiteSpace?
+  def self.whiteSpace?
     e = @emails
     result = e.include?(" ")
     result
